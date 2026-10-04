@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.querysail/gsc",
+  "title": "QuerySail: Google Search Console",
+  "description": "Hosted, read-only Google Search Console MCP: performance, comparisons, URL inspection, sitemaps.",
+  "version": "1.0.0",
+  "websiteUrl": "https://querysail.com/google-search-console",
+  "repository": {
+    "url": "https://github.com/GidianB/querysail-gsc",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://querysail.com/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["180x180"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.querysail.com/gsc/mcp"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "querysail-gsc",
+  "version": "1.0.0",
+  "description": "Read-only access to your own Google Search Console data: properties, search performance, period comparisons, URL inspection and sitemaps.",
+  "author": {
+    "name": "Gidian Bateman",
+    "email": "support@querysail.com",
+    "url": "https://querysail.com"
+  },
+  "homepage": "https://querysail.com/google-search-console",
+  "repository": "https://github.com/GidianB/querysail-gsc",
+  "license": "MIT",
+  "keywords": ["google search console", "seo", "search performance", "url inspection", "sitemaps", "mcp"]
+}
