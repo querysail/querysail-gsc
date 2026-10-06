@@ -42,7 +42,7 @@ claude mcp add --transport http --scope user querysail-gsc https://mcp.querysail
 Then run `/mcp`, choose `querysail-gsc` and sign in. Or install it as a plugin, which also adds a Search Console analysis skill:
 
 ```text
-/plugin marketplace add GidianB/querysail-gsc
+/plugin marketplace add querysail/querysail-gsc
 /plugin install querysail-gsc@querysail
 ```
 

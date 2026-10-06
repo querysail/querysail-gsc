@@ -3,10 +3,10 @@
   "name": "com.querysail/gsc",
   "title": "QuerySail: Google Search Console",
   "description": "Hosted, read-only Google Search Console MCP: performance, comparisons, URL inspection, sitemaps.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://querysail.com/google-search-console",
   "repository": {
-    "url": "https://github.com/GidianB/querysail-gsc",
+    "url": "https://github.com/querysail/querysail-gsc",
     "source": "github"
   },
   "icons": [
