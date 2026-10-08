@@ -54,6 +54,10 @@ Open **Customize → Connectors**, select **+ Add → Add custom connector**, na
 
 Turn on **Developer mode** under **Settings → Security and login**, go to [chatgpt.com/plugins](https://chatgpt.com/plugins), select the plus button and paste the endpoint as the connection URL.
 
+### Grok
+
+Go to [grok.com/connectors](https://grok.com/connectors), select **New Connector → Custom**, paste `https://mcp.querysail.com/gsc/mcp` as the MCP server URL and sign in. On Grok Business and Enterprise plans a team admin first adds it at console.x.ai under **Grok Business → Connectors**.
+
 ### Codex
 
 ```bash
