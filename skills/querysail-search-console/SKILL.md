@@ -32,7 +32,7 @@ The user signs in with a QuerySail account that has Google Search Console connec
 
 ## Quick wins
 
-Use these recipes when the user asks for SEO opportunities. The thresholds are starting points. Loosen them for a small site and tighten them for a large one. Exclude brand queries with an `excludingRegex` filter on `query` (for example `(?i)brandname`), because they behave differently. Rows come back sorted by clicks, so page through 2 or 3 pages of 100 rows to reach queries with few clicks.
+Use these recipes when the user asks for SEO opportunities. The thresholds are starting points. Loosen them for a small site and tighten them for a large one. Exclude brand queries with an `excludingRegex` filter on `query` (for example `brandname|brand name`), because they behave differently. Search Console reports queries in lowercase. Rows come back sorted by clicks, so page through 2 or 3 pages of 100 rows to reach queries with few clicks. Say how many rows you checked, and that rows with fewer clicks were not checked.
 
 ### Striking-distance queries
 
@@ -57,14 +57,13 @@ One query where two or more pages from the same site split the impressions.
 
 1. Call `get_performance` with `dimensions: ["query", "page"]` and `row_limit: 100`.
 2. Group the rows by query. Flag queries where two or more pages each get at least 20% of the query's impressions.
-3. To confirm a case, call `get_performance` with a `query` `equals` filter and `dimensions: ["date", "page"]`. Pages that swap places over time are a stronger sign than two pages that rank side by side.
-4. URL variants (http and https, www and non-www, trailing slashes) of one page are not cannibalization. Report them as a canonical issue and check them with `inspect_urls`.
+3. The second page of a pair often has few clicks, so it can sit past the rows you fetched. For the user's top queries, and for each flagged query, call `get_performance` with a `query` `equals` filter and `dimensions: ["page"]`.
+4. To confirm a case, repeat that call with `dimensions: ["date", "page"]`. Pages that swap places over time are a stronger sign than two pages that rank side by side.
+5. URL variants (http and https, www and non-www, trailing slashes) of one page are not cannibalization. Report them as a canonical issue and check them with `inspect_urls`.
 
 ### Rising and falling
 
-1. Call `compare_performance` with `dimension: "query"` or `"page"`. The default compares the last 28 days with the 28 days before.
-2. Use `rank_by: "impressions"` to see early changes before clicks move. Use `compare_to: "previous_year"` for seasonal sites.
-3. Report the gainers and losers as observed changes. For a loser, check the page with `inspect_urls` before you suggest any other reason.
+Use `compare_performance` with `rank_by: "impressions"` to see early changes before clicks move, and `compare_to: "previous_year"` for seasonal sites. For a losing page, check it with `inspect_urls` before you suggest any other reason.
 
 ## Reporting
 
